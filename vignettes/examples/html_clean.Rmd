@@ -1,0 +1,15 @@
+---
+title: "html_clean template example"
+output:
+  rmdformats::html_clean:
+    thumbnails: true
+    lightbox: true
+    gallery: true
+pkgdown:
+  as_is: true    
+---
+
+```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
+res <- knitr::knit_child('_example_body.Rmd', quiet = TRUE)
+cat(res, sep = '\n')
+```
